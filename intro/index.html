@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>intro</title>
+    <style>
+        body {
+            padding: 10px;
+            margin: 20px;
+        }
+        code {
+            background-color: #dfd6d6;
+            border-radius: 3px;
+            font-family: courier, monospace;
+            padding: 0 3px;
+        }
+    </style>
+    <script src='js/intro.js'></script>
+</head>
+<body>
+    <h1>Programación funcional</h1>
+    <ul>
+        <li>
+            <h2>funciones de primer orden</h2>
+            <ol>
+                <li>Se trata de toda función que puede ser tratada como una como cualquier otro valor, como un número o una cadena. Estas variables pueden almacenar funciones que pueden ser ejecuctadas y pueden ser enviadas a otras funciones.</li>
+                <li>Las funciones de primer orden son funciones que se pasan a otras funciones.</li>
+            </ol>
+        </li>
+        <li>
+            <h2>funciones de orden superior</h2>
+            <ol>
+                <li>Funciones que pueden recibir funciones como parámetros.</li>
+                <li>Funciones que pueden retornar funciones.</li>
+            </ol>
+            <p>Las funciones de orden superior reciben variables y funciones de primer orden almacenadas como variables.</p>
+        </li>
+        
+        <li>
+            <h2>funciones flecha</h2>
+            <ol>
+                <li>Las funciones flecha son funciones anónimas que puedes guardar en una variable. Una función anónima es aquella que no tiene un nombre asociado y se define directamente en el lugar donde se necesita.</li>
+                <li>El arrow function puede represantar una función de primer orden y se utiliza para escribir menos código. Por ejemplo sin necesidad de poner el return ni la palabra function.</li>
+            </ol>
+        </li>
+        <li>
+            <h2>bucles</h2>
+            <p>forEach es una función que recorre un array y ejecuta una función para cada elemento (iteración).</p>
+            <ol>
+                <li>Los array tienen métodos los cuales reciben funciones de primer orden que se pueden crear a partir de un arrow function. por ejemplo <code>forEach((name)=>console.log(name))</code></li>
+                <li>forEach es un método <b>inmutable</b></li>
+            </ol>
+            <p>map trata los array de forma que devuelve un nuevo array con las iteraciones. Por ejemplo <code>namesUpper = names.map((name)=>name.toUpperCase())</code> devuelva un nuevo array <code>namesUpper</code> con cada irteración almacenada a mayúsculas</p>
+            <ol>
+                <li>map es un método <b>inmutable</b></li>
+            </ol>
+            <p>reduce es un método que acumula y recorre un array, devolviendo un valor, por ejemplo <code>total = numbers.reduce((ac, number)=>ac + number, 0)</code></p>
+            <ol>
+                <li>reduce recibe dos parametros, una función anónima y el valor inicial que es opcional.</li>
+            </ol>
+        </li>
+    </ul>
+    <h1>Programación orientada a objetos POO</h1>
+    <ul>
+        <li>
+            <h2>clases y objetos</h2>
+            <p><code>class Person{constructor(name, lastName){this.name = name; this.lastName = lastName}}</code></p>
+            <ol>
+                <li>Una clase es un molde para crear objetos.</li>
+                <li>Un objeto es una instancia de una clase.</li>
+                <li>La palabra clave <code>constructor</code> se utiliza para crear un objeto y se ejecuta cuando se crea un nuevo objeto de la propia clase.</li>
+                <li>La palabra clave <code>this</code> se utiliza para acceder a las propiedades y métodos de la propia clase.</li>
+                <li>Las funciones de la clase se llaman métodos.</li>
+            </ol>
+            <p> En este ejemplo <code>const person = new Person("Jaime", "Verdejo")</code> el constructor "contruye" el objeto person con las propiedades name y lastName</p>
+            <p>En los ejemplos de patrón de diseño nos encontraremos que están basadas en clases y objetos</p>
+        </li>
+        <li>Se recomienda aprender POO con clases ya que van ligadas a clases, herencias e interfaces.</li>
+        <li>
+            <h2>funcional</h2>
+            <p>Otra manera de crear objetos es con funciones</p>
+            <p><code>function Drink(name){this.name = name; this.info = function(){return "la bebida es: " + this.name;}}</code></p>
+            <ul>
+                <li>funciones factory
+                    <p>Una función factory es una función que devuelve un objeto.</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <h1>Herencias</h1>
+    <p>Una herencia viene dada a una clase por medio de la palabra clave <code>extends</code>. que extiende de la clase padre</p>
+    <ul>
+        <li>Una herencia debe cumplir unas reglas o conocico como contrato.</li>
+        <li>Las reglas son:</li>
+        <ol>
+            <li>Un hijo debe tener todos los atributos de la clase padre.</li>
+            <li>Un hijo debe tener todos los métodos de la clase padre.</li>
+            <li>Un hijo debe tener todos los constructores de la clase padre.</li>
+        </ol>
+        <p>Como hijo se obliga a recibir el nombre del padre por medio del propio constructor del padre con el método reservado <code>super()</code></p>
+        <p><code>constructor(name, alcohol){super(name);this.alcohol = alcohol;}</code></p>
+    </ul>
+</body>
+</html>
