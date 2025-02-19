@@ -2,11 +2,12 @@
 
 npm i
 
+· ts-node module
+
 can compile a .ts file with command.
 ```
 npx ts-node intro/ts/intro
 ```
-
 open repl cli with __npx ts-node__.
 
 A "start" script is deployed in **package.json**
@@ -20,20 +21,19 @@ A "start" script is deployed in **package.json**
   }
 }
 ```
-
 ### NOTE : do not remove tsconfig.json file.
 
 ## Strategy
-![Strategy](Strategy.png)
+![Strategy](img/Strategy.png)
 ## Observer
-![Observer](Observer.png)
+![Observer](img/Observer.png)
 ## Decorator
-![Decorator](Decorator.png)
+![Decorator](img/Decorator.png)
 ## Builder
-![Builder](Builder.png)
+![Builder](img/Builder.png)
 ## State
-![State](State.png)
+![State](img/State.png)
 ## Bridge
-![Bridge](Bridge.png)
+![Bridge](img/Bridge.png)
 
 Design paterns [certificado udemy](patrones_de_diseño.pdf)
