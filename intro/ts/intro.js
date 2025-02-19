@@ -13,7 +13,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-console.log("prueba");
+console.log("TS");
 // clases y objetos
 var Drink = /** @class */ (function () {
     function Drink(name) {

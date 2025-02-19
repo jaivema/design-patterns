@@ -1,4 +1,4 @@
-console.log("prueba");
+console.log("TS");
 
 // clases y objetos
 class Drink{
