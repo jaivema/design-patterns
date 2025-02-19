@@ -9,7 +9,37 @@
     <script src='js/singleton.js'></script>
 </head>
 <body>
+    <a class="back" href="../index.html">&lt;&lt;</a>
     <h1>Patrón Singleton</h1>
     <p>Permite que únicamente una instancia de una clase pueda existir.</p>
+    <ul>
+        <li>Es necesario que la clase tenga un constructor que evalue si ya existe una instancia de la clase</li>
+        <li>El constructor debe ser privado</li>
+        <li>La clase debe ser estatica</li>
+        <li>La clase debe ser un objeto</li>
+    </ul>
+    <h3>Funcionamiento</h3>
+    <p>En este ejemplo se muestra el funcionamiento del patrón Singleton.</p>
+    <ul>
+        <li>Si existe la instancia de la clase Singleton</li>
+        <ul>
+            <li>Se devuelve la instancia</li>
+        </ul>
+        <li>Si no existe la instancia</li>
+        <ul>
+            <li>Se crea la instancia</li>
+            <li>Se devuelve la instancia</li>
+        </ul>
+        <li>Se accede a la instancia de la clase Singleton</li>
+    </ul>
+    <p>De esta manera se garantiza que solo exista una instancia de la clase mediante una evaluación en el constructor.</p>
+    <code>const weekDays = new WeekDays("en");</code><br>
+    <code>const weekDays2 = new WeekDays("es");</code><br>
+    <p>En este ejemplo se muestra el funcionamiento del patrón Singleton. <code>weekDays2</code> no crea una nueva instancia de la clase <code>WeekDays</code> ya que ya existe una instancia. Por lo que quedan los días de la semana en inglés.</p>
+    <h2>Singleton con TS</h2>
+    <p>Con typescript se resuelven fácilmente los tipados de modificadores y obligar a utilizar los métodos propios de la clase. De manera que agregando la palabra clave <code>private</code> modificas los puntos de acceso. También es posible privatizar el constructor. Por lo que la construcción queda protegida y solo se instancia por medio del método. La evaluación de instancia puede quedar fuera del constructor y quedarse en getInstance() con tipado</p>
+    <p>Otro punto fuerte es que el modificador privado permite utilizarlo sólo dentro de la clase</p>
+    <p>modificador | operador | nombreMétodo | tipado</p>
+    <p><code>private static instance: SingletonTS</code></p>
 </body>
 </html>
