@@ -4,22 +4,14 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='../index.css'>
     <title>intro</title>
-    <style>
-        body {
-            padding: 10px;
-            margin: 20px;
-        }
-        code {
-            background-color: #dfd6d6;
-            border-radius: 3px;
-            font-family: courier, monospace;
-            padding: 0 3px;
-        }
-    </style>
     <script src='js/intro.js'></script>
 </head>
 <body>
+    <div class="box">
+        <a class="back" href="../index.html">&lt;&lt;</a>
+    </div>
     <h1>Programación funcional</h1>
     <ul>
         <li>
@@ -72,7 +64,7 @@
                 <li>Un objeto es una instancia de una clase.</li>
                 <li>La palabra clave <code>constructor</code> se utiliza para crear un objeto y se ejecuta cuando se crea un nuevo objeto de la propia clase.</li>
                 <li>La palabra clave <code>this</code> se utiliza para acceder a las propiedades y métodos de la propia clase.</li>
-                <li>Las funciones de la clase se llaman métodos.</li>
+                <li>Las funciones de la clase se llaman métodos y son estaticas. <code>static</code></li>
             </ol>
             <p> En este ejemplo <code>const person = new Person("Jaime", "Verdejo")</code> el constructor "contruye" el objeto person con las propiedades name y lastName</p>
             <p>En los ejemplos de patrón de diseño nos encontraremos que están basadas en clases y objetos</p>
@@ -101,6 +93,22 @@
         </ol>
         <p>Como hijo se obliga a recibir el nombre del padre por medio del propio constructor del padre con el método reservado <code>super()</code></p>
         <p><code>constructor(name, alcohol){super(name);this.alcohol = alcohol;}</code></p>
+    </ul>
+    <h1>Interfaces con TS</h1>
+    <ul>
+        <li>Una interfaz permite <b>categorizar</b> objetos</li>
+        <li>Al implementar la interfaz se asegura que el objeto pueda tener un comportamiento ya esperado</li>
+        <li>También se conoce a la interfaz como <b>contrato</b></li>
+        <li>La interfaz se define con la palabra clave <code>interface</code></li>
+        <li>Se categoriza con la palabra clave <code>implements</code> seguida del nombre de la clase</li>
+    </ul>
+    <p>Por ejemplo, un snack y una cerveza se pueden categorizar como producto y cerveza hereda la clase bebida</p>
+    <img src="https://mermaid.ink/img/pako:eNqdUsFugzAM_ZXIp6LBD0Q7Tf2ASr1NuXjBBVRio5Acqo5_X4C1gq3duvkUP9vPz47PYKUk0GBb7Pttg5VHZ1glmxC181JGG9R5Bkd76nxjSSuO7o38Aq8o7MbQJtOqD77hag4OhpeU2xQ5LgkLRkfrkonPCicsdRe_WaZki5yGD_JLvz2jfaRfcW-uezpytarI_r6KFyK_UoatlVra7yL-Ie4L1w9qby3xsTEu5_H8XhTzom_g45QzPH_9FYQcHHmHTZkucFqDgVCTIwM6PUv0RwOGh5SHMcj-xBZ0GpZy8BKrGvQB2z55sSsx0Of5XtEO-VXk4g8fHUnoWA?type=png)](https://mermaid.live/edit#pako:eNqdUsFugzAM_ZXIp6LBD0Q7Tf2ASr1NuXjBBVRio5Acqo5_X4C1gq3duvkUP9vPz47PYKUk0GBb7Pttg5VHZ1glmxC181JGG9R5Bkd76nxjSSuO7o38Aq8o7MbQJtOqD77hag4OhpeU2xQ5LgkLRkfrkonPCicsdRe_WaZki5yGD_JLvz2jfaRfcW-uezpytarI_r6KFyK_UoatlVra7yL-Ie4L1w9qby3xsTEu5_H8XhTzom_g45QzPH_9FYQcHHmHTZkucFqDgVCTIwM6PUv0RwOGh5SHMcj-xBZ0GpZy8BKrGvQB2z55sSsx0Of5XtEO-VXk4g8fHUnoWA"/>
+    <ul>
+        <li>Product: Es una interfaz con un atributo <code>price</code> y un método <code>getPrice()</code>.</li>
+        <li>Drink: Es una clase con un atributo privado <code>name</code> y un método <code>info()</code>.</li>
+        <li>Snack: Implementa la interfaz <code>Product</code> y tiene atributos <code>name</code> y <code>price</code>, además del método <code>getPrice()</code>.</li>
+        <li>Beer: Hereda de <code>Drink</code> e implementa <code>Product</code>. Tiene atributos <code>alcohol</code> y <code>price</code>, y sobrescribe los métodos <code>info()</code> y <code>getPrice()</code>.</li>
     </ul>
 </body>
 </html>

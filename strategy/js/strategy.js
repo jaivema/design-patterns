@@ -85,7 +85,7 @@ class ListStrategy{
          element.innerHTML = data.reduce((ac, e)=>{
             
             return ac + `<div>
-                    <h2>${e.name}</h2> 
+                    <h3>${e.name}</h3> 
                     <p>${e.country}<p>
                 </div>
             <hr>`;
@@ -100,7 +100,7 @@ class DetailedListStrategy{
          element.innerHTML = data.reduce((ac, e)=>{
      
             return ac + `<div>
-                    <h2>${e.name}</h2> 
+                    <h3>${e.name}</h3> 
                     <p>${e.country}<p>
                     <p>${e.info}</p>
                 </div>
@@ -116,7 +116,7 @@ class ListWithImageStrategy{
          element.innerHTML = data.reduce((ac, e)=>{
                 return ac + `<div>
                         <img width="10%" src="${e.img}">
-                        <h2>${e.name.toUpperCase()}</h2> 
+                        <h3>${e.name.toUpperCase()}</h3> 
                         <p>${e.country}<p>
                         <p>${e.info}</p>
                     </div>

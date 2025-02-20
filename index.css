@@ -1,0 +1,31 @@
+.box{
+    position: fixed;
+    top: 10px;
+}
+.back{
+    position: relative;
+    font-size: xx-large;
+    background-color: #f5f6f3;
+    border-radius: 25%;
+    left: -30px;
+    top: 10px;
+    padding: 10px;
+}
+h1, h2{
+    text-align: center;
+    color: #689a1c;
+}
+body {
+    padding: 50px;
+    font-size: x-large;
+    font-family: sans-serif;
+}
+code {
+    background-color: #e9e0e0;
+    border-radius: 3px;
+    font-family: courier, monospace;
+}
+a {
+    text-decoration: none;
+    color: #689a1c;
+}

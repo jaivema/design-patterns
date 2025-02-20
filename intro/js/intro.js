@@ -1,5 +1,5 @@
 // Programación FUNCIONAL
-
+console.log("JS");
 // función primer orden
 function sum(a,b){
     return a+b;

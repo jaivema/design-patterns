@@ -4,7 +4,7 @@ npm i
 
 · ts-node module
 
-can compile a .ts file with command.
+can compile a .ts file with command and displays console logs on terminal.
 ```
 npx ts-node intro/ts/intro
 ```
